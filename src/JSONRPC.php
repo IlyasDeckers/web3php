@@ -1,5 +1,5 @@
 <?php
-namespace IlyasDeckers\Web3PHP;
+namespace odyssee\Web3PHP;
 
 use GuzzleHttp\Client;
 

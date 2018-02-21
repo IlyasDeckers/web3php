@@ -1,5 +1,5 @@
 {
-    "name": "IlyasDeckers/web3php",
+    "name": "IlyasDeckers/web3PHP",
     "description": "A simple PHP package to interact with the Ethereum web3 API",
     "keywords": ["laravel", "web3", "ethereum"],
     "license": "MIT",
@@ -16,19 +16,10 @@
     },
     "autoload": {
         "psr-4": {
-            "IlyasDeckers\\Web3PHP\\": "src"
+            "App\\": "app/",
+            "odyssee\\Web3PHP\\": "packages/Web3PHP/src"
         }
     },
     "require-dev": {
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "IlyasDeckers\\Web3PHP\\Web3ServiceProvider"
-            ],
-            "aliases": {
-                "Alert": "IlyasDeckers\\Web3PHP\\Web3PHP"
-            }
-        }
     }
 }

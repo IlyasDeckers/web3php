@@ -1,7 +1,5 @@
 <?php
-namespace App\Acme\Api;
-
-use Exception;
+namespace odyssee\Web3PHP;
 
 class Ethereum extends JSONRPC
 {
