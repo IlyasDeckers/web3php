@@ -1,5 +1,5 @@
 <?php
-namespace IlyasDeckers\Web3PHP;
+namespace IlyasDeckers\Web3PHP\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +23,7 @@ class Web3PHPServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__.'/../config/web3.php' => config_path('sweet-alert.php'),
+            __DIR__.'/../config/web3.php' => config_path('web3.php'),
         ]);
     }
 }
