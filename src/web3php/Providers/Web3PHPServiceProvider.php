@@ -25,5 +25,9 @@ class Web3PHPServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/web3.php' => config_path('web3.php'),
         ]);
+
+        App::bind('wallets', function() {
+            return new \IlyasDeckers\Web3PHP\Ethereum;
+        });
     }
 }
