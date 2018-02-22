@@ -1,5 +1,5 @@
 <?php
-namespace odyssee\Web3PHP;
+namespace IlyasDeckers\Web3PHP;
 
 class Ethereum extends JSONRPC
 {

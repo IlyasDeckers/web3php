@@ -16,9 +16,17 @@
     },
     "autoload": {
         "psr-4": {
-            "odyssee\\Web3PHP\\": "packages/Web3PHP/src/web3php"
+            "IlyasDeckers\\Web3PHP\\": "packages/Web3PHP/src/web3php"
         }
     },
-    "require-dev": {
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IlyasDeckers\\Web3PHP\\Providers\\Web3PHPServiceProvider"
+            ],
+            "aliases": {
+                "Web3PHP": "IlyasDeckers\\Web3PHP\\src\\web3php\\Ethereum"
+            }
+        }
     }
 }
