@@ -2,6 +2,7 @@
 namespace IlyasDeckers\Web3PHP\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\App;
 
 class Web3PHPServiceProvider extends ServiceProvider
 {
@@ -23,11 +24,15 @@ class Web3PHPServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__.'/../config/web3.php' => config_path('web3.php'),
+            __DIR__.'/../../config/web3.php' => config_path('web3.php'),
         ]);
 
-        App::bind('wallets', function() {
+        App::bind('ethereum', function() {
             return new \IlyasDeckers\Web3PHP\Ethereum;
         });
+
+        config([
+            'config/web3.php',
+        ]);
     }
 }
