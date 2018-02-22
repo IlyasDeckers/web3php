@@ -1,5 +1,5 @@
     {
-    "name": "IlyasDeckers/web3PHP",
+    "name": "ilyasdeckers/web3php",
     "description": "A simple PHP package to interact with the Ethereum web3 API",
     "keywords": ["laravel", "web3", "ethereum"],
     "license": "MIT",
