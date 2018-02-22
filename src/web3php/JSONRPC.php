@@ -8,11 +8,25 @@ class JSONRPC
 	protected $host, $port, $version;
 	protected $id = 0;
 	
-	public function __construct($host, $port, $version="2.0")
+	public function __construct($host = null, $port = null, $version="2.0")
 	{
+		if (!$host && !$port) {
+			$host = config('web3.url');
+			$port = config('web3.port');
+		}
 		$this->host = $host;
 		$this->port = $port;
 		$this->version = $version;
+	}
+
+	public function setHost($url) 
+	{
+		$this->host = $host;
+	}
+
+	public function setPort($port) 
+	{
+		$this->port = $port;
 	}
 	
 	public function rpcRequest($method, $params=array())
